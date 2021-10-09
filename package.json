@@ -1,0 +1,68 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage test",
+    "build": "babel -d build src",
+    "start": "nodemon --exec babel-node src/index.js",
+    "lint": "eslint ",
+    "lint:fix": "eslint --fix",
+    "release": "release-it --ci",
+    "prepare": "husky install"
+  },
+  "author": "Niko Kaartinen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/runtime": "^7.15.4",
+    "@release-it/conventional-changelog": "^3.3.0",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.2.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.5",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "release-it": "^14.11.6",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.22.0",
+    "winston": "^3.3.3"
+  },
+  "release-it": {
+    "git": {
+      "requireCleanWorkingDir": false
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
