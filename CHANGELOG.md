@@ -1,3 +1,5 @@
+## [0.3.1](https://github.com/ggv3/fastify-template/compare/0.3.0...0.3.1) (2023-06-08)
+
 # [0.3.0](https://github.com/ggv3/fastify-template/compare/0.1.0...0.3.0) (2023-06-08)
 
 
